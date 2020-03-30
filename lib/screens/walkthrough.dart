@@ -13,8 +13,8 @@ class _WalkthroughState extends State<Walkthrough> {
   Widget build(BuildContext context) {
     List<PageViewModel> pages = [
       PageViewModel(
-        "Fresh Food",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        title: "Fresh Food",
+        body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
             " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
             "dui. Nulla porttitor accumsan tincidunt.",
         image: Image.asset(
@@ -28,61 +28,61 @@ class _WalkthroughState extends State<Walkthrough> {
             color: Theme.of(context).accentColor,
           ),
           bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
+//          dotsDecorator: DotsDecorator(
+//            activeColor: Theme.of(context).accentColor,
+//            activeSize: Size.fromRadius(8),
+//          ),
           pageColor: Theme.of(context).primaryColor,
         ),
       ),
-
-      PageViewModel(
-        "Fast Delivery",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
-        image: Image.asset(
-          "assets/on2.png",
-          height: 185.0,
-        ),
-        decoration: PageDecoration(
-          titleTextStyle: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).accentColor,
-          ),
-          bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
-          pageColor: Theme.of(context).primaryColor,
-        ),
-      ),
-
-      PageViewModel(
-        "Easy Payment",
-        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
-        image: Image.asset(
-          "assets/on3.png",
-          height: 175.0,
-        ),
-        decoration: PageDecoration(
-          titleTextStyle: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).accentColor,
-          ),
-          bodyTextStyle: TextStyle(fontSize: 15.0),
-          dotsDecorator: DotsDecorator(
-            activeColor: Theme.of(context).accentColor,
-            activeSize: Size.fromRadius(8),
-          ),
-          pageColor: Theme.of(context).primaryColor,
-        ),
-      ),
+//
+//      PageViewModel(
+//        "Fast Delivery",
+//        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+//            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
+//            "dui. Nulla porttitor accumsan tincidunt.",
+//        image: Image.asset(
+//          "assets/on2.png",
+//          height: 185.0,
+//        ),
+//        decoration: PageDecoration(
+//          titleTextStyle: TextStyle(
+//            fontSize: 28.0,
+//            fontWeight: FontWeight.w600,
+//            color: Theme.of(context).accentColor,
+//          ),
+//          bodyTextStyle: TextStyle(fontSize: 15.0),
+//          dotsDecorator: DotsDecorator(
+//            activeColor: Theme.of(context).accentColor,
+//            activeSize: Size.fromRadius(8),
+//          ),
+//          pageColor: Theme.of(context).primaryColor,
+//        ),
+//      ),
+//
+//      PageViewModel(
+//        "Easy Payment",
+//        "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+//            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
+//            "dui. Nulla porttitor accumsan tincidunt.",
+//        image: Image.asset(
+//          "assets/on3.png",
+//          height: 175.0,
+//        ),
+//        decoration: PageDecoration(
+//          titleTextStyle: TextStyle(
+//            fontSize: 28.0,
+//            fontWeight: FontWeight.w600,
+//            color: Theme.of(context).accentColor,
+//          ),
+//          bodyTextStyle: TextStyle(fontSize: 15.0),
+//          dotsDecorator: DotsDecorator(
+//            activeColor: Theme.of(context).accentColor,
+//            activeSize: Size.fromRadius(8),
+//          ),
+//          pageColor: Theme.of(context).primaryColor,
+//        ),
+//      ),
     ];
 
     return WillPopScope(

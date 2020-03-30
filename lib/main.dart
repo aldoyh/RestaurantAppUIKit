@@ -4,6 +4,9 @@ import 'package:restaurant_ui_kit/providers/app_provider.dart';
 import 'package:restaurant_ui_kit/screens/splash.dart';
 import 'package:restaurant_ui_kit/util/const.dart';
 
+//import 'package:http/http.dart' as http;
+//import 'providers/wp_engine.dart';
+
 void main() {
   runApp(
     MultiProvider(
@@ -14,6 +17,8 @@ void main() {
     ),
   );
 }
+
+
 
 class MyApp extends StatelessWidget {
   @override

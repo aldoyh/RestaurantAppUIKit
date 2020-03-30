@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_ui_kit/screens/checkout.dart';
-import 'package:restaurant_ui_kit/util/const.dart';
 import 'package:restaurant_ui_kit/util/foods.dart';
 import 'package:restaurant_ui_kit/widgets/cart_item.dart';
-import 'package:restaurant_ui_kit/widgets/smooth_star_rating.dart';
+//import 'package:restaurant_ui_kit/widgets/smooth_star_rating.dart';
+//import 'package:restaurant_ui_kit/util/const.dart';
 
 class CartScreen extends StatefulWidget {
   @override

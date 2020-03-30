@@ -1,11 +1,16 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:restaurant_ui_kit/providers/nrproperty.dart';
 import 'package:restaurant_ui_kit/screens/dishes.dart';
 import 'package:restaurant_ui_kit/widgets/grid_product.dart';
 import 'package:restaurant_ui_kit/widgets/home_category.dart';
 import 'package:restaurant_ui_kit/widgets/slider_item.dart';
-import 'package:restaurant_ui_kit/util/foods.dart';
+// import 'package:restaurant_ui_kit/util/foods.dart';
 import 'package:restaurant_ui_kit/util/categories.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
+import '../providers/wp_engine.dart';
 
 
 class Home extends StatefulWidget {
@@ -15,7 +20,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
 
-  List<T> map<T>(List list, Function handler) {
+  List<T> map<T>(List<NRProperty> list, Function handler) {
     List<T> result = [];
     for (var i = 0; i < list.length; i++) {
       result.add(handler(i, list[i]));
@@ -76,13 +81,14 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
             CarouselSlider(
               height: MediaQuery.of(context).size.height/2.4,
               items: map<Widget>(
-                foods,
-                    (index, i){
-                      Map food = foods[index];
+                // TODO: Change the data Provider for Homepage
+                    posts,
+                    (index, i) {
+                      Map food = posts[index].toMap();
                   return SliderItem(
-                    img: food['img'],
+                    img: food['featured_media'],
                     isFav: false,
-                    name: food['name'],
+                    name: food['title'],
                     rating: 5.0,
                     raters: 23,
                   );
@@ -95,6 +101,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
               onPageChanged: (index) {
                 setState(() {
                   _current = index;
+                  log(_current);
                 });
               },
             ),
@@ -164,16 +171,16 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                 childAspectRatio: MediaQuery.of(context).size.width /
                     (MediaQuery.of(context).size.height / 1.25),
               ),
-              itemCount: foods == null ? 0 :foods.length,
+              itemCount: posts == null ? 0 :posts.length,
               itemBuilder: (BuildContext context, int index) {
 //                Food food = Food.fromJson(foods[index]);
-                Map food = foods[index];
+                Map food = posts[index].toMap();
 //                print(foods);
 //                print(foods.length);
                 return GridProduct(
-                  img: food['img'],
+                  img: food['featured_media'],
                   isFav: false,
-                  name: food['name'],
+                  name: food['title'],
                   rating: 5.0,
                   raters: 23,
                 );
